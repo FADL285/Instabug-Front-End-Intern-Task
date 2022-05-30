@@ -1,3 +1,8 @@
+<script setup>
+import { useAuthStore } from "@/stores/auth.js";
+useAuthStore();
+</script>
+
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
