@@ -2,8 +2,11 @@
 
 :root {
   --color-background: #ffffff;
-  --color-text: #445065;
+  --text-dark-color: #445065;
+  --text-light-color: #ffffff;
   --font-family: 'Roboto', sans-serif;
+  --font-small: 0.875rem;
+  --error-color: #f24220;
 }
 
 
@@ -18,11 +21,65 @@
 
 body {
   min-height: 100vh;
-  color: var(--color-text);
+  color: var(--text-dark-color);
   background: var(--color-background);
   line-height: 1.6;
   font-family: var(--font-family);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.1s ease-in-out;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mbs-sm {
+  margin-block-start: 0.25rem;
+}
+
+.link {
+  color: #0089e5;
+  &:hover, &:active, &:focus {
+    color: #16253f;
+  }
+}
+
+.link--gray {
+  color: #a6a6a6;
+  &:hover, &:active, &:focus {
+    color: #0089e5;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-small {
+  font-size: var(--font-small);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
 }

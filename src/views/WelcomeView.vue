@@ -4,9 +4,4 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "HomeView",
-  components: {},
-};
-</script>
+<script setup></script>
