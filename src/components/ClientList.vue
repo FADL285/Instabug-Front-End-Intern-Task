@@ -3,27 +3,27 @@
     <p class="text-center clients__title">Trusted by the top companies.</p>
     <ul class="clients__logos">
       <li>
-        <a href="#">
+        <a href="#" tabindex="-1">
           <img src="../assets/images/clients/asana_logo.svg" alt="" />
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="#" tabindex="-1">
           <img src="../assets/images/clients/doordash_logo.svg" alt="" />
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="#" tabindex="-1">
           <img src="../assets/images/clients/emirates_logo.svg" alt="" />
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="#" tabindex="-1">
           <img src="../assets/images/clients/lyft_logo.svg" alt="" />
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="#" tabindex="-1">
           <img src="../assets/images/clients/toyota.svg" alt="" />
         </a>
       </li>

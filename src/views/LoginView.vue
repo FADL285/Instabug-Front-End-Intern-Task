@@ -14,7 +14,8 @@
         </div>
         <LoginWithProviders />
         <p class="separator">OR</p>
-        <LoginForm />
+        <AppAlert message="Your email and/or password are incorrect" />
+        <LoginForm @submit-form="submitFrom" />
         <ClientList />
       </div>
     </div>
@@ -25,12 +26,19 @@
 import LoginForm from "@/components/LoginForm.vue";
 import LoginWithProviders from "@/components/LoginWithProviders.vue";
 import ClientList from "@/components/ClientList.vue";
+import AppAlert from "@/components/AppAlert.vue";
 export default {
   name: "HomeView",
-  components: { ClientList, LoginForm, LoginWithProviders },
+  components: { AppAlert, ClientList, LoginForm, LoginWithProviders },
+  methods: {
+    submitFrom(data) {
+      console.log("Submitted", data);
+    },
+  },
 };
 </script>
 
+<!-- TODO: Make it responsive -->
 <style lang="scss" scoped>
 //Separator
 .separator {
