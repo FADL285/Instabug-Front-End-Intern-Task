@@ -3,9 +3,11 @@
     <img src="./src/assets/logo.svg" alt="Instabug Logo" width="200">
     <p>Small Vue App that consists from 3 Pages With Automation tests the login form using Cypress.</p>
     <img src="./preview/app-preview.gif" alt="App Preview">
-    <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D" alt="Vue Logo">
-    <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass Logo">
-    <img src="https://img.shields.io/badge/Cypress-23272C?style=for-the-badge&logo=cypress&logoColor=#23272C" alt="Cypress Logo">
+    <p>
+        <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D" alt="Vue Logo">
+        <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass Logo">
+        <img src="https://img.shields.io/badge/Cypress-23272C?style=for-the-badge&logo=cypress&logoColor=#23272C" alt="Cypress Logo">
+    </p>
 </div>
 
 ---
