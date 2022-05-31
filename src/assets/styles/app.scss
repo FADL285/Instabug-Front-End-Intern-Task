@@ -6,6 +6,7 @@
   --text-light-color: #ffffff;
   --font-family: 'Roboto', sans-serif;
   --font-small: 0.875rem;
+  --font-large: 1.5rem;
   --error-color: #f24220;
 }
 
@@ -46,6 +47,10 @@ ul {
 
 .mbs-sm {
   margin-block-start: 0.25rem;
+}
+
+.mw-100 {
+  max-width: 100%;
 }
 
 .link {

@@ -1,10 +1,7 @@
 <template>
   <div class="login">
     <div class="slider__wrapper flex-center align-center">
-      <img
-        src="../assets/images/slider/products-overview.svg"
-        alt="products overview"
-      />
+      <LoginSlider />
     </div>
     <div class="content__wrapper flex-center align-center">
       <div class="content">
@@ -27,9 +24,16 @@ import LoginForm from "@/components/LoginForm.vue";
 import LoginWithProviders from "@/components/LoginWithProviders.vue";
 import ClientList from "@/components/ClientList.vue";
 import AppAlert from "@/components/AppAlert.vue";
+import LoginSlider from "@/components/LoginSlider.vue";
 export default {
   name: "HomeView",
-  components: { AppAlert, ClientList, LoginForm, LoginWithProviders },
+  components: {
+    LoginSlider,
+    AppAlert,
+    ClientList,
+    LoginForm,
+    LoginWithProviders,
+  },
   methods: {
     submitFrom(data) {
       console.log("Submitted", data);
@@ -60,6 +64,9 @@ export default {
   min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 672px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
   .head {
     margin-block-end: 1rem;
@@ -67,7 +74,20 @@ export default {
 
   .slider {
     &__wrapper {
-      background: #002177;
+      background-image: linear-gradient(
+        to left bottom,
+        #002177,
+        #002176,
+        #002174,
+        #002173,
+        #002171
+      );
+
+      overflow: hidden;
+
+      @media (max-width: 672px) {
+        display: none;
+      }
     }
   }
 
