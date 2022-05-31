@@ -20,7 +20,7 @@ const submitFrom = async (data) => {
     });
   } catch (e) {
     if (e.message === "INVALID_CREDENTIALS")
-      formError.value = "Your email and/or password are incorrect";
+      formError.value = "Your email and/or password are incorrect.";
   }
 };
 </script>

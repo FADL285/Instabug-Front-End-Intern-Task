@@ -15,7 +15,11 @@ defineProps({
 
 <template>
   <div>
-    <p class="alert" :class="{ 'alert--danger': type === 'danger' }">
+    <p
+      class="alert"
+      :class="{ 'alert--danger': type === 'danger' }"
+      data-cy="alert"
+    >
       {{ message }}
     </p>
   </div>

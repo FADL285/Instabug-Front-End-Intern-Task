@@ -58,7 +58,7 @@ const submit = handleSubmit((values) => {
 </script>
 
 <template>
-  <form @submit="submit" novalidate>
+  <form @submit="submit" novalidate data-cy="form">
     <div class="form-control">
       <label for="email" class="font-small">Work Email</label>
       <input

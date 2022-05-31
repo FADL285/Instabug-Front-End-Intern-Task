@@ -17,10 +17,12 @@ const logoutF = async () => {
 
 <template>
   <div id="welcome" class="flex-center align-center flex-col">
-    <img alt="Vue logo" src="../assets/logo.svg" />
+    <img alt="Instabug logo" src="../assets/logo.svg" />
     <div class="text-center">
       <h2>Hey {{ username || "User" }}, Welcome to BugSquad!</h2>
-      <button class="btn-primary" @click="logoutF">Log out</button>
+      <button class="btn-primary" @click="logoutF" data-cy="logout">
+        Log out
+      </button>
     </div>
   </div>
 </template>
