@@ -1,8 +1,36 @@
+<script setup>
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+import LoginForm from "@/components/LoginForm.vue";
+import LoginWithProviders from "@/components/LoginWithProviders.vue";
+import ClientList from "@/components/ClientList.vue";
+import AppAlert from "@/components/AppAlert.vue";
+import LoginSlider from "@/components/LoginSlider.vue";
+import { useAuthStore } from "@/stores/auth.js";
+
+const authStore = useAuthStore();
+const router = useRouter();
+const formError = ref(null);
+
+const submitFrom = async (data) => {
+  try {
+    await authStore.login({ ...data });
+    router.push({
+      name: "welcome",
+    });
+  } catch (e) {
+    if (e.message === "INVALID_CREDENTIALS")
+      formError.value = "Your email and/or password are incorrect";
+  }
+};
+</script>
+
 <template>
   <div class="login">
     <div class="slider__wrapper flex-center align-center">
       <LoginSlider />
     </div>
+
     <div class="content__wrapper flex-center align-center">
       <div class="content">
         <div class="text-center head">
@@ -11,7 +39,7 @@
         </div>
         <LoginWithProviders />
         <p class="separator">OR</p>
-        <AppAlert message="Your email and/or password are incorrect" />
+        <AppAlert v-if="formError" :message="formError" />
         <LoginForm @submit-form="submitFrom" />
         <ClientList />
       </div>
@@ -19,30 +47,6 @@
   </div>
 </template>
 
-<script>
-import LoginForm from "@/components/LoginForm.vue";
-import LoginWithProviders from "@/components/LoginWithProviders.vue";
-import ClientList from "@/components/ClientList.vue";
-import AppAlert from "@/components/AppAlert.vue";
-import LoginSlider from "@/components/LoginSlider.vue";
-export default {
-  name: "HomeView",
-  components: {
-    LoginSlider,
-    AppAlert,
-    ClientList,
-    LoginForm,
-    LoginWithProviders,
-  },
-  methods: {
-    submitFrom(data) {
-      console.log("Submitted", data);
-    },
-  },
-};
-</script>
-
-<!-- TODO: Make it responsive -->
 <style lang="scss" scoped>
 //Separator
 .separator {

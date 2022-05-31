@@ -51,7 +51,6 @@ const passwordValidationListeners = validationListenersGenerator(passwordField);
 //Handle Submit
 const emit = defineEmits(["submitForm"]);
 const submit = handleSubmit((values) => {
-  console.log(values);
   emit("submitForm", {
     ...values,
   });

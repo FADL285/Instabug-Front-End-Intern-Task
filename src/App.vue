@@ -1,6 +1,9 @@
 <script setup>
 import { useAuthStore } from "@/stores/auth.js";
-useAuthStore();
+const authStore = useAuthStore();
+
+authStore.fetchUsers();
+authStore.autoLogin();
 </script>
 
 <template>
