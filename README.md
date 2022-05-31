@@ -13,8 +13,8 @@
 ---
 
 # Table of Contents
-- [Project Setup](#puild-setup)
-- [Task Specifications](#task-specifications)
+- [Project Setup](#Project-Setup)
+- [Task Specifications](#Task-Specifications)
 
 ---
 
