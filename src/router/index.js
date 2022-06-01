@@ -17,7 +17,6 @@ const routes = [
       import(/* webpackChunkName: "login" */ "../views/LoginView.vue"),
     beforeEnter: () => {
       const authStore = useAuthStore();
-      console.log("isLoggedIn", authStore.isLoggedIn);
       if (authStore.isLoggedIn) return { name: "welcome" };
     },
   },
@@ -36,7 +35,6 @@ const router = createRouter({
 
 router.beforeEach((to) => {
   const authStore = useAuthStore();
-  console.log(to.meta.requiresAuth && !authStore.isLoggedIn);
   if (to.meta.requiresAuth && !authStore.isLoggedIn) {
     return {
       name: "login",

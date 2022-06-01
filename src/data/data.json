@@ -1,32 +1,41 @@
-[{
-  "email": "mohamed@instabug.com",
-  "password": "A12345678"
-},
+[
   {
+    "__id": "3a3804ee-71ed-4d76-880f-71364b4eefc0",
+    "email": "mohamed@instabug.com",
+    "password": "A12345678"
+  },
+  {
+    "__id": "ebaab5eb-3a0e-46d7-886c-5ce8c048789f",
     "email": "mohamed1@instabug.com",
     "password": "A12345678"
   },
   {
+    "__id": "2a767b96-1950-4cde-ba2e-b77a62fbbc20",
     "email": "mohamed2@instabug.com",
     "password": "A12345678"
   },
   {
+    "__id": "d0b35e03-fa31-4c58-80f0-5e3f8994305b",
     "email": "mohamed3@instabug.com",
     "password": "A12345678"
   },
   {
+    "__id": "824afd32-a7a0-4906-a666-96e4f0ba8760",
     "email": "mohamed4@instabug.com",
     "password": "A12345678"
   },
   {
+    "__id": "8e763e4d-4295-4b63-af7d-75ad40ddc5b2",
     "email": "mohamed5@instabug.com",
     "password": "A12345678"
   },
   {
+    "__id": "1d696bf0-4b37-4bef-a4bf-17953a472185",
     "email": "mohamed6@instabug.com",
     "password": "A12345678"
   },
   {
+    "__id": "2632c9d2-350a-484b-8bd2-3526b3b0df4e",
     "email": "mohamed7@instabug.com",
     "password": "A12345678"
   }

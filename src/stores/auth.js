@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import users from "@/data/data.json";
+import users from "@/data/users.json";
 
 export const useAuthStore = defineStore("AuthStore", {
   state: () => ({
@@ -18,7 +18,10 @@ export const useAuthStore = defineStore("AuthStore", {
         throw new Error("INVALID_CREDENTIALS");
       // if true save to store and localstorage
       this.user = user.email;
-      localStorage.setItem("user", email);
+      localStorage.setItem(
+        "user",
+        JSON.stringify({ __id: user.__id, email: user.email })
+      );
       // throw error if invalid credential
     },
     async logout() {
@@ -26,13 +29,11 @@ export const useAuthStore = defineStore("AuthStore", {
       localStorage.removeItem("user");
     },
     async autoLogin() {
-      let user = localStorage.getItem("user");
+      let user = JSON.parse(localStorage.getItem("user"));
       if (user) {
-        user = this.users.find((u) => u.email === user);
+        user = this.users.find((u) => u.__id === user.__id);
       }
-      console.log(user);
       if (user) this.user = user.email;
-      console.log(this.isLoggedIn);
     },
   },
 });
