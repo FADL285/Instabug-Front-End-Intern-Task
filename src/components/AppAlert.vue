@@ -30,8 +30,8 @@ defineProps({
   padding: 0.5rem;
   margin-block-end: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.25);
-  border-radius: 4px;
-  color: #445065;
+  border-radius: var(--border-radius-width);
+  color: var(--dark-color);
   font-size: var(--font-small);
 
   &--danger {

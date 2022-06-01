@@ -2,13 +2,16 @@
 
 :root {
   --primary-color: #0089e5;
+  --primary-color-light: #0099ff;
   --primary-color-dark: #16253f;
-  --color-background: #ffffff;
-  --text-dark-color: #445065;
-  --text-light-color: #ffffff;
+  --dark-color: #445065;
+  --gray-color: #a6a6a6;
+  --light-color: #ffffff;
   --font-family: 'Roboto', sans-serif;
   --font-small: 0.875rem;
   --font-large: 1.5rem;
+  --line-height: 1.6;
+  --border-radius-width: 4px;
   --error-color: #f24220;
 }
 
@@ -40,29 +43,29 @@
 
 body {
   min-height: 100vh;
-  color: var(--text-dark-color);
-  background: var(--color-background);
-  line-height: 1.6;
+  color: var(--dark-color);
+  background: var(--light-color);
+  line-height: var(--line-height);
   font-family: var(--font-family);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+// RESETS
 img {
   max-width: 100%;
 }
-
 a {
   text-decoration: none;
   transition: color 0.1s ease-in-out;
 }
-
 ul {
   list-style: none;
   padding: 0;
 }
 
+// Helpers
 .mbs-sm {
   margin-block-start: 0.25rem;
 }
@@ -76,12 +79,12 @@ ul {
   &:hover, &:active, &:focus {
     color: var(--primary-color-dark);
   }
-}
 
-.link--gray {
-  color: #a6a6a6;
-  &:hover, &:active, &:focus {
-    color: var(--primary-color);
+  &--gray {
+    color: var(--gray-color);
+    &:hover, &:active, &:focus {
+      color: var(--primary-color);
+    }
   }
 }
 
@@ -93,27 +96,25 @@ ul {
   font-size: var(--font-small);
 }
 
+// Flex
 .flex-center {
   display: flex;
   justify-content: center;
 }
-
 .align-center {
   align-items: center;
 }
-
 .flex-between {
   display: flex;
   justify-content: space-between;
 }
-
 .flex-col {
   flex-direction: column;
 }
 
 .btn-primary {
   background: var(--primary-color);
-  color: var(--text-light-color);
+  color: var(--light-color);
   border: 1px solid var(--primary-color);
   padding: 0.6rem 1.2rem;
   font-size: 1.175rem;
@@ -124,6 +125,6 @@ ul {
 
   &:hover {
     color: var(--primary-color);
-    background: var(--text-light-color);
+    background: var(--light-color);
   }
 }

@@ -1,8 +1,9 @@
 import { defineStore } from "pinia";
+import users from "@/data/data.json";
 
 export const useAuthStore = defineStore("AuthStore", {
   state: () => ({
-    users: [],
+    users: users,
     user: null,
   }),
   getters: {
@@ -10,9 +11,6 @@ export const useAuthStore = defineStore("AuthStore", {
     getUsername: (state) => state.user?.substring(0, state.user?.indexOf("@")),
   },
   actions: {
-    async fetchUsers() {
-      this.users = (await import("@/data/data.json")).default;
-    },
     async login({ email, password }) {
       // Check If user email is exist & password is correct
       const user = this.users.find((user) => user.email === email);
@@ -28,8 +26,13 @@ export const useAuthStore = defineStore("AuthStore", {
       localStorage.removeItem("user");
     },
     async autoLogin() {
-      const user = localStorage.getItem("user");
-      if (user) this.user = user;
+      let user = localStorage.getItem("user");
+      if (user) {
+        user = this.users.find((u) => u.email === user);
+      }
+      console.log(user);
+      if (user) this.user = user.email;
+      console.log(this.isLoggedIn);
     },
   },
 });

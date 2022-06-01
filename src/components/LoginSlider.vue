@@ -62,13 +62,13 @@ export default {
 <style>
 .swiper-pagination-bullet,
 .swiper-pagination-bullet-active {
-  background: var(--text-light-color);
+  background: var(--light-color);
 }
 
 .swiper-slide {
   margin-block-end: 3.5rem;
   padding-inline: 1rem;
-  color: var(--text-light-color);
+  color: var(--light-color);
   text-transform: capitalize;
   font-size: var(--font-large);
 }

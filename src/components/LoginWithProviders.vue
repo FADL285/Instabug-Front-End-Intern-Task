@@ -35,8 +35,8 @@ export default {
   .login-btn {
     padding: 0.4rem 0;
     text-align: center;
-    border-radius: 4px;
-    color: var(--text-light-color);
+    border-radius: var(--border-radius-width);
+    color: var(--light-color);
     display: flex;
     align-content: center;
     justify-content: center;
@@ -47,7 +47,7 @@ export default {
       border: 1px solid #4285f4;
 
       .svg-icon {
-        background: var(--text-light-color);
+        background: var(--light-color);
       }
     }
 
@@ -67,7 +67,7 @@ export default {
       inset-inline-start: 1px;
       inset-block-start: 1px;
       padding: 4px;
-      border-radius: 4px;
+      border-radius: var(--border-radius-width);
     }
   }
 }

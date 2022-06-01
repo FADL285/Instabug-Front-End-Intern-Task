@@ -107,7 +107,7 @@ const submit = handleSubmit((values) => {
 <style scoped lang="scss">
 button:disabled {
   background: #ccc;
-  color: var(--text-light-color);
+  color: var(--light-color);
   cursor: not-allowed;
 }
 
@@ -117,7 +117,7 @@ button:disabled {
   label {
     display: block;
     margin: 0 0 0.25rem 0;
-    color: #445065;
+    color: var(--dark-color);
     cursor: pointer;
   }
 }
@@ -129,17 +129,15 @@ button:disabled {
   width: 100%;
   outline: 0;
   border: 1px solid #dcdee3;
-  border-radius: 4px;
-  background-color: var(--text-light-color);
-  color: var(--text-dark-color);
+  border-radius: var(--border-radius-width);
+  background-color: var(--light-color);
+  color: var(--dark-color);
   font-size: var(--font-small);
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 
   &:not(.error):focus {
     border-color: rgba(0, 153, 255, 0.01);
-    box-shadow: inset 0 0 4px 0 #099fff;
+    box-shadow: inset 0 0 4px 0 var(--primary-color-light);
   }
 
   &.error {
@@ -149,13 +147,13 @@ button:disabled {
 
 .login-btn {
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: var(--border-radius-width);
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
   user-select: none;
   appearance: none;
-  background-color: #0089e5;
+  background-color: var(--primary-color);
   color: #fff;
   height: 40px;
   font-size: var(--font-small);
@@ -163,8 +161,8 @@ button:disabled {
   transition: background-color 0.15s ease-in-out;
 
   &:hover:enabled {
-    border-color: #09f;
-    background-color: #09f;
+    border-color: var(--primary-color-light);
+    background-color: var(--primary-color-light);
   }
 }
 
