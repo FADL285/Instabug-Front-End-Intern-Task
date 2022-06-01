@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import users from "@/data/users.json";
+import users from "@/data/data.json";
 
 export const useAuthStore = defineStore("AuthStore", {
   state: () => ({
